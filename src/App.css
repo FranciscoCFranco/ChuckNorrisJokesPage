@@ -1,39 +1,56 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilo para o link da piada completa */
+
+.title {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: red;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.teste2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-p {
-  margin: 0;
+
+.title-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  background-color: #61dafb;
-  color: white;
-  border: none;
+.HomePage-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Estilo para o botão Próxima Piada */
+.HomePage-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
   cursor: pointer;
-  margin-top: 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
-  background-color: #1976d2;
+/* Estilo para a lista de piadas */
+.HomePage ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilo para cada item da lista de piadas */
+.HomePage li {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f5f5f5;
 }

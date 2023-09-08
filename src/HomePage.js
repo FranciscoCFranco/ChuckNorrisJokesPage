@@ -1,48 +1,58 @@
-// HomePage.js
 import React, { useState, useEffect } from 'react';
+import CategoryFilter from './CategoryFilter';
+import './App.css';
 
-function HomePage({ selectedCategory }) {
-    const [joke, setJoke] = useState({});
-    const [loading, setLoading] = useState(true);
+function HomePage() {
 
-    useEffect(() => {
-        fetchJoke();
-    }, [selectedCategory]);
+  const [joke, setJoke] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
-    const fetchJoke = async () => {
-        setLoading(true);
-        try {
-            const apiUrl = selectedCategory
-                ? `https://api.chucknorris.io/jokes/random?category=${selectedCategory}`
-                : 'https://api.chucknorris.io/jokes/random';
+  useEffect(() => {
+    fetchJoke(selectedCategory);
+  }, [selectedCategory]);
 
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-            setJoke(data);
-            setLoading(false);
-        } catch (error) {
-            console.error('Erro ao buscar piada:', error);
-            setLoading(false);
-        }
-    };
+  const fetchJoke = async (category = '') => {
+    setLoading(true);
+    try {
+      let apiUrl = 'https://api.chucknorris.io/jokes/random';
+      if (category) {
+        apiUrl = `https://api.chucknorris.io/jokes/random?category=${category}`;
+      }
 
-    return (
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+      setJoke(data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Erro ao buscar piada:', error);
+      setLoading(false);
+    }
+  };
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
+  return (
+    <div>
+      <h1 className='title'>Piadas do Chuck Norris!!!</h1>
+      <CategoryFilter onSelectCategory={handleCategorySelect} />
+      {loading ? (
+        <p className='title-loading '>Carregando piada...</p>
+      ) : (
         <div>
-            <h2>Piadas do Chuck Norris</h2>
-            {loading ? (
-                <p>Carregando piada...</p>
-            ) : (
-                <div>
-                    <p>{joke.value}</p>
-                    <p>Categoria: {joke.category}</p>
-                    <a href={joke.url} target="_blank" rel="noopener noreferrer">
-                        Ver Piada Completa
-                    </a>
-                    <button onClick={fetchJoke}>Próxima Piada</button>
-                </div>
-            )}
+          <p className='teste2'>{joke.value}</p>
+          <div className='HomePage-button'>
+            <a href={joke.url} target="_blank" rel="noopener noreferrer">
+              Ver Piada Completa
+            </a>
+            <button className='teste' onClick={() => fetchJoke(selectedCategory)}>Próxima Piada</button>
+          </div>
         </div>
-    );
+      )}
+    </div>
+  );
 }
 
 export default HomePage;
