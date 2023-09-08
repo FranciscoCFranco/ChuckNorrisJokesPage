@@ -39,7 +39,7 @@ function CategoryFilter({ onSelectCategory }) {
 
   return (
     <div>
-      <div className='content'>
+      <div className='content2'>
         <h2>Filtrar por Categoria:</h2>
       </div>
       <div className='sub-title'>

@@ -34,15 +34,15 @@ function HomePage() {
   };
 
   return (
-    <div className='teste'>
-      <h1 className="title">Piadas do Chuck Norris!!!</h1>
+    <div className='image'>
+      <h1 className="title">Piadas do Chuck Norris</h1>
       <CategoryFilter onSelectCategory={handleCategorySelect} />
       {loading ? (
         <p className="title-loading">Carregando piada...</p>
       ) : (
         <div>
-          <p className="content">{joke.value}</p>
-          <div className='content'>
+          <p className="content5">{joke.value}</p>
+          <div className="content">
             <a className="animated-button" href={joke.url} target="_blank" rel="noopener noreferrer">
               Ver Piada Completa
             </a>
