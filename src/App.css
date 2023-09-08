@@ -1,16 +1,32 @@
 /* Estilo para o título */
-
 .teste {
-  margin: 50x;
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/chucknorris_logo_coloured_small.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover; /* Cobrir toda a área do componente */
+  background-repeat: no-repeat; /* Evitar repetição */
+  background-attachment: fixed; /* Manter a imagem fixa no lugar enquanto o conteúdo rola */
+  width: 100%; /* Ocupar a largura total da tela */
+  height: 100vh; /* Ocupar a altura total da tela */
+  overflow-x: hidden;
 }
+
+
 
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 60px;
   color: #333;
   margin-bottom: 20px;
+}
+
+.sub-title {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilo para o título de carregamento */

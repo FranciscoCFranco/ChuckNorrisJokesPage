@@ -38,17 +38,21 @@ function CategoryFilter({ onSelectCategory }) {
   };
 
   return (
-    <div >
-      <h2>Filtrar por Categoria:</h2>
-      <select onChange={handleCategoryChange} value={selectedCategory}>
-        <option value="">Todas as Categorias</option>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {category}
-          </option>
-        ))}
-      </select>
-    </div>
+    <div>
+      <div className='content'>
+        <h2>Filtrar por Categoria:</h2>
+      </div>
+      <div className='sub-title'>
+        <select onChange={handleCategoryChange} value={selectedCategory}>
+          <option value="">Todas as Categorias</option>
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div >
   );
 }
 

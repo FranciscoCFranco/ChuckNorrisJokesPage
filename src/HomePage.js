@@ -34,7 +34,7 @@ function HomePage() {
   };
 
   return (
-    <div>
+    <div className='teste'>
       <h1 className="title">Piadas do Chuck Norris!!!</h1>
       <CategoryFilter onSelectCategory={handleCategorySelect} />
       {loading ? (
@@ -59,5 +59,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-
