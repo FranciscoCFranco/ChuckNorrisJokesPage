@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// HomePage.js
+import React, { useState, useEffect } from 'react';
 
-function App() {
+function HomePage() {
+  const [joke, setJoke] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchJoke();
+  }, []);
+
+  const fetchJoke = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch('https://api.chucknorris.io/jokes/random');
+      const data = await response.json();
+      setJoke(data);
+      setLoading(false);
+    } catch (error) {
+      console.error('Erro ao buscar piada:', error);
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Piadas do Chuck Norris</h1>
+      {loading ? (
+        <p>Carregando piada...</p>
+      ) : (
+        <div>
+          <p>{joke.value}</p>
+          <p>Categoria: {joke.category}</p>
+          <a href={joke.url} target="_blank" rel="noopener noreferrer">Ver Piada Completa</a>
+          <button onClick={fetchJoke}>Próxima Piada</button>
+        </div>
+      )}
     </div>
   );
 }
 
-export default App;
+export default HomePage;
+
+
+
