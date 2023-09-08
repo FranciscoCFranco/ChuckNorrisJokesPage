@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function CategoryFilter({ onSelectCategory }) {
   const [categories, setCategories] = useState([]);
@@ -37,7 +38,7 @@ function CategoryFilter({ onSelectCategory }) {
   };
 
   return (
-    <div>
+    <div >
       <h2>Filtrar por Categoria:</h2>
       <select onChange={handleCategoryChange} value={selectedCategory}>
         <option value="">Todas as Categorias</option>
@@ -52,3 +53,4 @@ function CategoryFilter({ onSelectCategory }) {
 }
 
 export default CategoryFilter;
+
