@@ -7,6 +7,22 @@ Projeto criado com o intuíto de facilitar o acesso a piadas que são considerad
 [Node](https://nodejs.org/en)
 [npm install](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
+## Requisitos
+- Node.js 14.15.0+
+- npm ou yarn
+
+## Instalação
+1. Clone o repositório: `git clone https://github.com/FranciscoCFranco/ChuckNorrisJokesPage
+2. Navegue até o diretório do projeto: `cd seu-projeto`
+3. Instale as dependências: `npm install`
+
+## Execução
+4. Inicie o servidor de desenvolvimento: `npm start`
+5. Abra seu navegador e acesse: `http://localhost:3000` (ou a porta que você configurou).
+
+## Contribuição
+Se você quiser contribuir com este projeto, por favor siga as [diretrizes de contribuição](CONTRIBUTING.md).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
