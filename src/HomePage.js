@@ -38,17 +38,34 @@ function HomePage() {
       <h1 className="title">Piadas do Chuck Norris</h1>
       <CategoryFilter onSelectCategory={handleCategorySelect} />
       {loading ? (
-        <p className="title-loading">Carregando piada...</p>
+        <p className="title-loading" aria-live="polite">
+          Carregando piada...
+        </p>
       ) : (
         <div>
-          <p className="content5">{joke.value}</p>
+          <div className="content5" role="status">
+            <p>{joke.value}</p>
+            {selectedCategory && (
+              <p>Categoria: {selectedCategory}</p>
+            )}
+          </div>
           <div className="content">
-            <a className="animated-button" href={joke.url} target="_blank" rel="noopener noreferrer">
+            <a
+              className="animated-button"
+              href={joke.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Piada Completa"
+            >
               Ver Piada Completa
             </a>
           </div>
           <div className="content">
-            <button className='animated-button content' onClick={() => fetchJoke(selectedCategory)}>
+            <button
+              className="animated-button content"
+              onClick={() => fetchJoke(selectedCategory)}
+              aria-label="Próxima Piada"
+            >
               Próxima Piada
             </button>
           </div>
