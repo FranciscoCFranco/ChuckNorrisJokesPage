@@ -12,14 +12,11 @@
 
 .title {
   margin: auto;
-  border-radius: 30%;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   font-size: 35px;
-  font-weight: 800;
   margin-top: 10px;
-  background-color: #0056b3;
   color: white;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px); 
@@ -28,13 +25,11 @@
   height: 50px;
   width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
 }
 
 
 .sub-title {
-  margin: auto;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,28 +50,22 @@
   justify-content: center;
   font-size: 16px;
   font-weight: 800;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .content5 {
-  padding: 10px;
-  height: 150px;
-  width: 750px;
-  margin: auto;
-  border-radius: 50%;
+  height: 100px;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   font-size: 16px;
   font-weight: 800;
   margin: auto;
-  background-color: #0056b3;
   color: white;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px); 
   border-radius: 10px; 
   padding: 30px;
-  width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -85,7 +74,7 @@
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 
@@ -94,7 +83,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 15rem;
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -146,6 +135,29 @@ select option {
 }
 
 
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 35px;
+    width: 500px;
+  }
 
+  .content5 {
+    width: 500px;
+  }
+}
 
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 24px; 
+    width: 90%; 
+  }
+
+  .content5 {
+    width: 90%;
+  }
+  
+  .animated-button {
+    width: 150px; 
+  }
+}
 

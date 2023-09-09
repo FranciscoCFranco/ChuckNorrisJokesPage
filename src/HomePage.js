@@ -47,8 +47,8 @@ function HomePage() {
               Ver Piada Completa
             </a>
           </div>
-          <div className='content'>
-            <button className='animated-button' onClick={() => fetchJoke(selectedCategory)}>
+          <div className="content">
+            <button className='animated-button content' onClick={() => fetchJoke(selectedCategory)}>
               Próxima Piada
             </button>
           </div>
