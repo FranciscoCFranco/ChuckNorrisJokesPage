@@ -46,7 +46,9 @@ function HomePage() {
           <div className="content5" role="status">
             <p>{joke.value}</p>
             {selectedCategory && (
-              <p>Categoria: {selectedCategory}</p>
+              <div className='category'>
+                <p>Categoria: {selectedCategory}</p>
+              </div>
             )}
           </div>
           <div className="content">
