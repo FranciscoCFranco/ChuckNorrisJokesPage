@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Chuck Norris Jokes - React
+
+Projeto criado com o intuíto de facilitar o acesso a piadas que são consideradas clássicos, com o mestre, o maior, o magnanimo, Chuck Norris.
+![image](https://github.com/FranciscoCFranco/ChuckNorrisJokesPage/assets/90013831/6e6469cf-c300-4cc6-a16c-a5a89024b779)
+
+#Dependencias e pacotes:
+[Node](https://nodejs.org/en)
+[npm install](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
