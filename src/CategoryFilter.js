@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function CategoryFilter({ onSelectCategory }) {
   const [categories, setCategories] = useState([]);
