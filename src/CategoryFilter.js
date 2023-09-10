@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 
 function CategoryFilter({ onSelectCategory }) {
   const [categories, setCategories] = useState([]);
@@ -13,19 +12,7 @@ function CategoryFilter({ onSelectCategory }) {
     try {
       const response = await fetch('https://api.chucknorris.io/jokes/categories');
       const data = await response.json();
-
-      const translatedCategories = data.map((category) => {
-        switch (category) {
-          case 'dev':
-            return 'Desenvolvimento';
-          case 'animal':
-            return 'Animais';
-          default:
-            return category;
-        }
-      });
-
-      setCategories(translatedCategories);
+      setCategories(data);
     } catch (error) {
       console.error('Erro ao buscar categorias:', error);
     }
@@ -52,9 +39,8 @@ function CategoryFilter({ onSelectCategory }) {
           ))}
         </select>
       </div>
-    </div >
+    </div>
   );
 }
 
 export default CategoryFilter;
-
